@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Me | Mahesh Vyas</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .about-section {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+        }
+        
+        .about-image {
+            width: 100%;
+            max-width: 350px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .about-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .about-content p {
+            line-height: 1.8;
+        }
+        
+        .education {
+            margin-top: 3rem;
+        }
+        
+        .education-item {
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        .education-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: var(--primary-gradient);
+            border-radius: 3px;
+        }
+        
+        .education-item h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-item p {
+            color: var(--light-text);
+        }
+        
+        .education-item .year {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .skills-section {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 3rem auto 0;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background-color: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            transition: var(--transition);
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .skill-category h3 {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .skill-name {
+            font-weight: 500;
+        }
+        
+        .skill-level-text {
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                margin: 0 auto;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .about-content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .about-intro {
+            text-align: center;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .title-decoration {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--primary-gradient);
+            border-radius: 3px;
+        }
+
+        .about-description {
+            margin-bottom: 2rem;
+        }
+
+        .description-paragraph {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .highlight-text {
+            color: var(--accent-color);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .highlight-text::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent-color);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-text:hover::after {
+            transform: scaleX(1);
+        }
+
+        .about-cta {
+            margin-top: 2rem;
+        }
+
+        .about-cta .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-content-wrapper {
+                padding: 1.5rem;
+            }
+
+            .about-title {
+                font-size: 2rem;
+            }
+
+            .description-paragraph {
+                font-size: 1rem;
+            }
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.85);
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-content {
+            position: relative;
+            margin: 2% auto;
+            padding: 0;
+            width: 90%;
+            max-width: 900px;
+            max-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 5px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 1001;
+        }
+
+        .close-modal:hover {
+            color: var(--accent-color);
+        }
+
+        .cert-link {
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .cert-link:hover {
+            transform: translateY(-5px);
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section class="section container" style="padding-top: 8rem;">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content-wrapper">
+                <div class="about-intro">
+                    <h3 class="about-title">
+                        <span class="accent-text">Mahesh Vyas</span>
+                        <span class="title-decoration"></span>
+                    </h3>
+                    <div class="about-description">
+                        <p class="description-paragraph">
+                            I am a 3rd-year Computer Science (AI) student with a passion for 
+                            <span class="highlight-text">technology</span>, and
+                            <span class="highlight-text">creativity</span>. 
+                            I love building real-world solutions using tools like Python, JavaScript, Django, and REST APIs.
+                        </p>
+                        <p class="description-paragraph">
+                            Currently, I'm actively learning 
+                            <span class="highlight-text">Artificial Intelligence</span> and 
+                            <span class="highlight-text">Machine Learning</span>, 
+                            exploring how intelligent systems can solve real problems. I'm always eager to learn, collaborate, and grow as a developer while working on meaningful tech projects.
+                        </p>
+                    </div>
+                    
+                    <div class="about-cta">
+                        <a href="#certifications" class="btn">
+                            <i class="fas fa-certificate"></i>
+                            View Certifications
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section container">
+            <h2 class="section-title">My Education</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div class="skill-card">
+                    <h3 class="skill-title">
+                        <i class="fas fa-graduation-cap skill-icon"></i>
+                        School
+                    </h3>
+                    <div style="margin: 2rem 0; text-align: center;">
+                        <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">GNPS, Udaipur</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Graduated with PCM</p>
+                        <a href="https://www.gnpsudaipur.com/" target="_blank" class="btn">Visit School</a>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <h3 class="skill-title">
+                        <i class="fas fa-university skill-icon"></i>
+                        College
+                    </h3>
+                    <div style="margin: 2rem 0; text-align: center;">
+                        <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">GITS, Udaipur</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">2021 - Present, Computer Science & AI Engineering</p>
+                        <a href="https://gits.ac.in" target="_blank" class="btn">Visit College</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section container">
+            <h2 class="section-title">My Certifications</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3 class="skill-title">
+                        <i class="fas fa-certificate skill-icon"></i>
+                        IIT Kharagpur
+                    </h3>
+                    <div style="margin: 1.5rem 0; text-align: center;">
+                        <div class="cert-link" data-img="/assets/certifications/cc.png">
+                            <img src="/assets/certifications/cc.png" alt="Other Certifications" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem; box-shadow: var(--box-shadow);">
+                            <a class="btn">Cloud Computing</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-title">
+                        <i class="fas fa-certificate skill-icon"></i>
+                        Udemy
+                    </h3>
+                    <div style="margin: 1.5rem 0; text-align: center;">
+                        <div class="cert-link" data-img="/assets/certifications/udemy.png">
+                            <img src="/assets/certifications/udemy.png" alt="Web Developer Bootcamp" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem; box-shadow: var(--box-shadow);">
+                            <a class="btn">The Web developer bootcamp</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <h3 class="skill-title">
+                        <i class="fas fa-certificate skill-icon"></i>
+                        IIT Madras
+                    </h3>
+                    <div style="margin: 1.5rem 0; text-align: center;">
+                        <div class="cert-link" data-img="/assets/certifications/pfds.png">
+                            <img src="/assets/certifications/pfds.png" alt="Python Data Science" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem; box-shadow: var(--box-shadow);">
+                            <a class="btn">Python Data Science</a>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="skill-card">
+                    <h3 class="skill-title">
+                        <i class="fas fa-certificate skill-icon"></i>
+                        IIT Madras
+                    </h3>
+                    <div style="margin: 1.5rem 0; text-align: center;">
+                        <div class="cert-link" data-img="/assets/certifications/tjcwp.png">
+                            <img src="/assets/certifications/tjcwp.png" alt="Other Certifications" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem; box-shadow: var(--box-shadow);">
+                            <a class="btn">The joy of computing using Python</a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section container">
+            <h2 class="section-title">My Skills</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1.5rem;">
+                
+                
+                <div class="skill-card" style="text-align: center; padding: 1.5rem;">
+                    <i class="fab fa-python" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                    <h4 style="margin-top: 1rem;">Python</h4>
+                </div>
+                
+               
+                
+                <div class="skill-card" style="text-align: center; padding: 1.5rem;">
+                    <i class="fas fa-code" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                    <h4 style="margin-top: 1rem;">C Language</h4>
+                </div>
+                <div class="skill-card" style="text-align: center; padding: 1.5rem;">
+                    <i class="fas fa-code" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                    <h4 style="margin-top: 1rem;">Django framework</h4>
+                </div>
+                <div class="skill-card" style="text-align: center; padding: 1.5rem;">
+                    <i class="fas fa-database" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                    <h4 style="margin-top: 1rem;">SQL</h4>
+                </div>
+                
+                <div class="skill-card" style="text-align: center; padding: 1.5rem;">
+                    <i class="fab fa-html5" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                    <h4 style="margin-top: 1rem;">HTML</h4>
+                </div>
+                
+                <div class="skill-card" style="text-align: center; padding: 1.5rem;">
+                    <i class="fab fa-css3-alt" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                    <h4 style="margin-top: 1rem;">CSS</h4>
+                </div>
+                
+               
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Certification Images -->
+    <div id="certModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" class="modal-img" src="" alt="Certification">
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="https://github.com/maheshh-v" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                
+                <!-- <a href="https://hashnode.com/@maheshvyas" target="_blank" class="social-link">
+                    <i class="fab fa-hashnode"></i>
+                </a> -->
+                
+                <a href="https://www.linkedin.com/in/mahesh-vyas-88ab41188/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                
+                <!-- <a href="https://hackerrank.com/maheshvyas" target="_blank" class="social-link">
+                    <i class="fab fa-hackerrank"></i>
+                </a> -->
+                
+                <a href="https://www.instagram.com/maheshh___vy/" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                
+                <a href="https://x.com/maheshh_v" target="_blank" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                
+            </div>
+             <a href="https://www.youtube.com/watch?v=eJO5HU_7_1w&t=83s" target="_blank" class="btn btn-outline">
+                <i class="fas fa-music"></i>
+                I'm Slim Shady
+            </a>
+
+        </div>
+    </footer>
+    
+
+    <script>
+        // Simple JavaScript for mobile menu toggle
+        const toggleBtn = document.querySelector('.toggle-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        toggleBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !toggleBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Certification modal functionality
+        const modal = document.getElementById('certModal');
+        const modalImg = document.getElementById('modalImg');
+        const closeModal = document.querySelector('.close-modal');
+        const certLinks = document.querySelectorAll('.cert-link');
+        
+        // Open modal when certification is clicked
+        certLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                const imgSrc = this.getAttribute('data-img');
+                modalImg.src = imgSrc;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+        });
+        
+        // Close modal when X is clicked
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Enable scrolling
+        });
+        
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            }
+        });
+        
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && modal.style.display === 'block') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            }
+        });
+    </script>
+</body>
+</html> 
