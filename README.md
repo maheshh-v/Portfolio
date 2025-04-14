@@ -44,12 +44,16 @@ This portfolio is designed to be:
 
 ## Deployment on GitHub Pages
 
-1. Create a GitHub repository for your portfolio
-2. Push your code to the repository
+This website is currently deployed using GitHub Pages and can be accessed at:
+https://maheshh-v.github.io/Portfolio/
+
+If you want to deploy your own version:
+1. Fork this repository or create your own based on it
+2. Push your code to your GitHub repository
 3. Go to your repository settings
-4. Scroll down to the "GitHub Pages" section
+4. Scroll down to the "Pages" section under "Code and automation"
 5. Select the branch you want to deploy (usually `main`)
-6. Select the folder (usually `/`) and click Save
+6. Select the folder (usually `/ (root)`) and click Save
 7. Your site will be published at `https://yourusername.github.io/repository-name/`
 
 ## Technologies Used
