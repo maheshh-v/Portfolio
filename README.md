@@ -1,80 +1,52 @@
-# Portfolio Website
+Portfolio Website
+A clean, responsive dark-themed portfolio website built with HTML, CSS, and JavaScript. Ideal for showcasing your projects and skills as a Computer Science student.
 
-A clean, responsive portfolio website with a dark theme built using HTML, CSS, and JavaScript. Perfect for showcasing your beginner projects and skills as a Computer Science student.
+✨ Features
+Sleek dark design
 
-## Features
+Fully responsive layout
 
-- Dark modern design that looks professional
-- Responsive layout that works on all devices
-- Simple structure easy to understand for beginners
-- Project showcase with filtering capability
-- Skills visualization with progress bars
-- Contact form
-- Easy to customize and grow with you as you advance
+Project showcase with filter options
 
-## Pages
+Skills section with progress bars
 
-1. **Home** - Introduction and featured projects
-2. **About** - Personal information, education, and skills
-3. **Projects** - Showcase of your work with filtering options
-4. **Contact** - Contact form and information
+Contact form
 
-## How to Use
+Easy to customize
 
-1. Clone this repository
-2. Personalize the content (update text, add your own projects)
-3. Replace placeholder content with your actual information
-4. Deploy to GitHub Pages (free hosting)
+📄 Pages
+Home – Introduction and featured projects
 
-## Customization
+About – Personal info, education, and skills
 
-- Update your personal information in each HTML file
-- Modify colors in the `styles/main.css` file by changing the CSS variables in the `:root` selector
-- Add your own projects to the `projects.html` file
-- Update the skills section with your own expertise levels
-- Add your social media links
+Projects – Display your work with filters
 
-## For Beginners
+Contact – Contact form and details
 
-This portfolio is designed to be:
-- Easy to understand even if you're new to web development
-- Simple to maintain and update as you learn more
-- Professional looking despite being relatively simple
-- Scalable so it can grow with your skills
+🛠️ Customization
+Edit content directly in HTML files
 
-## Deployment on GitHub Pages
+Change colors via CSS variables in main.css
 
-This website is currently deployed using GitHub Pages and can be accessed at:
-https://maheshh-v.github.io/Portfolio/
+Add or update projects and skills easily
 
-If you want to deploy your own version:
-1. Fork this repository or create your own based on it
-2. Push your code to your GitHub repository
-3. Go to your repository settings
-4. Scroll down to the "Pages" section under "Code and automation"
-5. Select the branch you want to deploy (usually `main`)
-6. Select the folder (usually `/ (root)`) and click Save
-7. Your site will be published at `https://yourusername.github.io/repository-name/`
+Link your social profiles
 
-## Technologies Used
+🚀 Live Demo
+View it live here:
+🔗 maheshh-v.github.io/Portfolio
 
-- HTML5
-- CSS3 (with CSS variables and Flexbox/Grid layouts)
-- JavaScript (ES6+)
-- Font Awesome for icons
+🧰 Built With
+HTML5
 
-## Browser Support
+CSS3 (Flexbox, Grid, CSS Variables)
 
-- Chrome
-- Firefox
-- Safari
-- Edge
-- Opera
+JavaScript (ES6+)
 
-## Credits
+Font Awesome (for icons)
 
-- Font Awesome for icons
+✅ Browser Support
+Works well on all modern browsers: Chrome, Firefox, Safari, Edge, and Opera.
 
-## License
-
-Feel free to use this template for your personal portfolio. 
+📄 License
+Free to use and customize for your personal portfolio
