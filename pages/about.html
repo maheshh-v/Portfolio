@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -13,13 +14,13 @@
             max-width: 1400px;
             margin: 0 auto;
         }
-        
+
         .about-container {
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 3rem;
         }
-        
+
         .about-image {
             width: 100%;
             max-width: 350px;
@@ -27,38 +28,38 @@
             overflow: hidden;
             box-shadow: var(--box-shadow);
         }
-        
+
         .about-image img {
             width: 100%;
             height: auto;
             display: block;
         }
-        
+
         .about-content {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
         }
-        
+
         .about-content h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-        
+
         .about-content p {
             line-height: 1.8;
         }
-        
+
         .education {
             margin-top: 3rem;
         }
-        
+
         .education-item {
             margin-bottom: 2rem;
             padding-left: 2rem;
             position: relative;
         }
-        
+
         .education-item::before {
             content: '';
             position: absolute;
@@ -69,33 +70,33 @@
             background: var(--primary-gradient);
             border-radius: 3px;
         }
-        
+
         .education-item h3 {
             margin-bottom: 0.5rem;
         }
-        
+
         .education-item p {
             color: var(--light-text);
         }
-        
+
         .education-item .year {
             color: var(--primary-color);
             font-weight: 500;
             margin-bottom: 0.5rem;
         }
-        
+
         .skills-section {
             padding: 5rem 5%;
             max-width: 1400px;
             margin: 3rem auto 0;
         }
-        
+
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 2rem;
         }
-        
+
         .skill-category {
             background-color: var(--card-background);
             border-radius: var(--border-radius);
@@ -103,44 +104,44 @@
             padding: 2rem;
             transition: var(--transition);
         }
-        
+
         .skill-category:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
-        
+
         .skill-category h3 {
             margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .skill-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .skill-name {
             font-weight: 500;
         }
-        
+
         .skill-level-text {
             color: var(--primary-color);
             font-weight: 500;
             font-size: 0.9rem;
         }
-        
+
         @media screen and (max-width: 768px) {
             .about-container {
                 grid-template-columns: 1fr;
             }
-            
+
             .about-image {
                 margin: 0 auto;
             }
-            
+
             .skills-container {
                 grid-template-columns: 1fr;
             }
@@ -296,15 +297,21 @@
         }
 
         @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav class="container">
-            <div class="logo">Portfolio</div>
+            <div class="logo animated-logo">Portfolio</div>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="about.html" class="active">About</a></li>
@@ -320,41 +327,56 @@
     <main>
         <!-- About Section -->
         <section class="section container" style="padding-top: 8rem;">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">🚀 About Me</h2>
+            <p class="section-subtitle">Passionate about creating intelligent solutions</p>
             <div class="about-content-wrapper">
                 <div class="about-intro">
                     <h3 class="about-title">
                         <span class="accent-text">Mahesh Vyas</span>
                         <span class="title-decoration"></span>
                     </h3>
-                    <div class="about-description">
-                        <p class="description-paragraph">
-                            I am a 3rd-year Computer Science (AI) student with a passion for 
-                            <span class="highlight-text">technology</span>, and
-                            <span class="highlight-text">creativity</span>. 
-                            I love building real-world solutions using tools like Python, JavaScript, Django, and REST APIs.
-                        </p>
-                        <p class="description-paragraph">
-                            Currently, I'm actively learning 
-                            <span class="highlight-text">Artificial Intelligence</span> and 
-                            <span class="highlight-text">Machine Learning</span>, 
-                            exploring how intelligent systems can solve real problems. I'm always eager to learn, collaborate, and grow as a developer while working on meaningful tech projects.
-                        </p>
-                    </div>
-                    
-                    <div class="about-cta">
+   <div class="about-description">
+    <p class="description-paragraph">
+        I’m a final-year Computer Science (AI) student, passionate about solving real-world problems using
+        <span class="highlight-text">Artificial Intelligence</span> and 
+        <span class="highlight-text">Machine Learning</span>. 
+        My core strengths include 
+        <span class="highlight-text">Python</span>, 
+        <span class="highlight-text">LLMs</span>, 
+        <span class="highlight-text">LangChain</span>, and 
+        <span class="highlight-text">NLP applications</span>.
+    </p>
+    <p class="description-paragraph">
+        I’ve built AI projects involving 
+        <span class="highlight-text">semantic search</span>, 
+        <span class="highlight-text">RAG pipelines</span>, and 
+        <span class="highlight-text">classification models</span>, and I’m comfortable with 
+        <span class="highlight-text">vector databases</span>, 
+        <span class="highlight-text">prompt engineering</span>, and 
+        <span class="highlight-text">model evaluation</span>. 
+        I also enjoy deploying these solutions using tools like 
+        <span class="highlight-text">Flask</span>, 
+        <span class="highlight-text">Streamlit</span>, and 
+        <span class="highlight-text">REST APIs</span>.
+    </p>
+</div>
+
+
+
+                    <!-- <div class="about-cta">
                         <a href="#certifications" class="btn">
                             <i class="fas fa-certificate"></i>
                             View Certifications
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
 
         <!-- Education Section -->
         <section class="section container">
-            <h2 class="section-title">My Education</h2>
+            <h2 class="section-title">🎓 My Education</h2>
+            <p class="section-subtitle">Building strong foundations for innovation</p>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
                 <div class="skill-card">
                     <h3 class="skill-title">
@@ -367,7 +389,7 @@
                         <a href="https://www.gnpsudaipur.com/" target="_blank" class="btn">Visit School</a>
                     </div>
                 </div>
-                
+
                 <div class="skill-card">
                     <h3 class="skill-title">
                         <i class="fas fa-university skill-icon"></i>
@@ -375,7 +397,8 @@
                     </h3>
                     <div style="margin: 2rem 0; text-align: center;">
                         <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">GITS, Udaipur</h4>
-                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">2021 - Present, Computer Science & AI Engineering</p>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">2022 - Present, Computer Science &
+                            AI Engineering</p>
                         <a href="https://gits.ac.in" target="_blank" class="btn">Visit College</a>
                     </div>
                 </div>
@@ -384,7 +407,8 @@
 
         <!-- Certifications Section -->
         <section id="certifications" class="section container">
-            <h2 class="section-title">My Certifications</h2>
+            <h2 class="section-title">🏆 My Certifications</h2>
+            <p class="section-subtitle">Continuous learning and skill development</p>
             <div class="skills-container">
                 <div class="skill-card">
                     <h3 class="skill-title">
@@ -393,7 +417,8 @@
                     </h3>
                     <div style="margin: 1.5rem 0; text-align: center;">
                         <div class="cert-link" data-img="../assets/certifications/cc.png">
-                            <img src="../assets/certifications/cc.png" alt="Other Certifications" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem; box-shadow: var(--box-shadow);">
+                            <img src="../assets/certifications/cc.png" alt="Other Certifications"
+                                style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem; box-shadow: var(--box-shadow);">
                             <a class="btn">Cloud Computing</a>
                         </div>
                     </div>
@@ -405,12 +430,13 @@
                     </h3>
                     <div style="margin: 1.5rem 0; text-align: center;">
                         <div class="cert-link" data-img="../assets/certifications/udemy.png">
-                            <img src="../assets/certifications/udemy.png" alt="Web Developer Bootcamp" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem; box-shadow: var(--box-shadow);">
+                            <img src="../assets/certifications/udemy.png" alt="Web Developer Bootcamp"
+                                style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem; box-shadow: var(--box-shadow);">
                             <a class="btn">The Web developer bootcamp</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="skill-card">
                     <h3 class="skill-title">
                         <i class="fas fa-certificate skill-icon"></i>
@@ -418,65 +444,132 @@
                     </h3>
                     <div style="margin: 1.5rem 0; text-align: center;">
                         <div class="cert-link" data-img="../assets/certifications/pfds.png">
-                            <img src="../assets/certifications/pfds.png" alt="Python Data Science" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem; box-shadow: var(--box-shadow);">
+                            <img src="../assets/certifications/pfds.png" alt="Python Data Science"
+                                style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem; box-shadow: var(--box-shadow);">
                             <a class="btn">Python Data Science</a>
                         </div>
                     </div>
                 </div>
-               
+
                 <div class="skill-card">
                     <h3 class="skill-title">
                         <i class="fas fa-certificate skill-icon"></i>
-                        IIT Madras
+                        IIT Kharagpur
                     </h3>
                     <div style="margin: 1.5rem 0; text-align: center;">
-                        <div class="cert-link" data-img="../assets/certifications/tjcwp.png">
-                            <img src="../assets/certifications/tjcwp.png" alt="Other Certifications" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem; box-shadow: var(--box-shadow);">
-                            <a class="btn">The joy of computing using Python</a>
+                        <div class="cert-link" data-img="../assets/certifications/cnip.png">
+                            <img src="../assets/certifications/cnip.png" alt="Other Certifications"
+                                style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem; box-shadow: var(--box-shadow);">
+                            <a class="btn">Computer Networks and Internet Protocols</a>
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </section>
 
         <!-- Skills Section -->
         <section class="section container">
             <h2 class="section-title">My Skills</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1.5rem;">
-                
-                
-                <div class="skill-card" style="text-align: center; padding: 1.5rem;">
-                    <i class="fab fa-python" style="font-size: 2.5rem; color: var(--primary-color);"></i>
-                    <h4 style="margin-top: 1rem;">Python</h4>
+
+            <div class="skill-category">
+                <h3 class="category-title">Languages</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-python"></i>
+                        <h4>Python</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-js"></i>
+                        <h4>JavaScript</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database"></i>
+                        <h4>SQL</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-code"></i>
+                        <h4>C Language</h4>
+                    </div>
                 </div>
-                
-               
-                
-                <div class="skill-card" style="text-align: center; padding: 1.5rem;">
-                    <i class="fas fa-code" style="font-size: 2.5rem; color: var(--primary-color);"></i>
-                    <h4 style="margin-top: 1rem;">C Language</h4>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="category-title">Libraries & Frameworks</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Scikit-learn</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-table"></i>
+                        <h4>Pandas</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-table"></i>
+                        <h4>NumPy</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-project-diagram"></i>
+                        <h4>TensorFlow</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-brain"></i>
+                        <h4>LangChain</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-robot"></i>
+                        <h4>Hugging Face</h4>
+                    </div>
                 </div>
-                <div class="skill-card" style="text-align: center; padding: 1.5rem;">
-                    <i class="fas fa-code" style="font-size: 2.5rem; color: var(--primary-color);"></i>
-                    <h4 style="margin-top: 1rem;">Django framework</h4>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="category-title">Web & Backend</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Django</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-plug"></i>
+                        <h4>Flask</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-code-branch"></i>
+                        <h4>FastAPI</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-html5"></i>
+                        <h4>HTML</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-css3-alt"></i>
+                        <h4>CSS</h4>
+                    </div>
                 </div>
-                <div class="skill-card" style="text-align: center; padding: 1.5rem;">
-                    <i class="fas fa-database" style="font-size: 2.5rem; color: var(--primary-color);"></i>
-                    <h4 style="margin-top: 1rem;">SQL</h4>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="category-title">Tools & Platforms</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-git-alt"></i>
+                        <h4>Git & GitHub</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-stream"></i>
+                        <h4>Streamlit</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-book"></i>
+                        <h4>Jupyter</h4>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-code"></i>
+                        <h4>VS Code</h4>
+                    </div>
                 </div>
-                
-                <div class="skill-card" style="text-align: center; padding: 1.5rem;">
-                    <i class="fab fa-html5" style="font-size: 2.5rem; color: var(--primary-color);"></i>
-                    <h4 style="margin-top: 1rem;">HTML</h4>
-                </div>
-                
-                <div class="skill-card" style="text-align: center; padding: 1.5rem;">
-                    <i class="fab fa-css3-alt" style="font-size: 2.5rem; color: var(--primary-color);"></i>
-                    <h4 style="margin-top: 1rem;">CSS</h4>
-                </div>
-                
-               
             </div>
         </section>
     </main>
@@ -495,46 +588,46 @@
                 <a href="https://github.com/maheshh-v" target="_blank" class="social-link">
                     <i class="fab fa-github"></i>
                 </a>
-                
+
                 <!-- <a href="https://hashnode.com/@maheshvyas" target="_blank" class="social-link">
                     <i class="fab fa-hashnode"></i>
                 </a> -->
-                
+
                 <a href="https://www.linkedin.com/in/mahesh-vyas-88ab41188/" target="_blank" class="social-link">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                
+
                 <!-- <a href="https://hackerrank.com/maheshvyas" target="_blank" class="social-link">
                     <i class="fab fa-hackerrank"></i>
                 </a> -->
-                
+
                 <a href="https://www.instagram.com/maheshh___vy/" target="_blank" class="social-link">
                     <i class="fab fa-instagram"></i>
                 </a>
-                
+
                 <a href="https://x.com/maheshh_v" target="_blank" class="social-link">
                     <i class="fab fa-twitter"></i>
                 </a>
-                
+
             </div>
-             <a href="https://www.youtube.com/watch?v=eJO5HU_7_1w&t=83s" target="_blank" class="btn btn-outline">
+            <a href="https://www.youtube.com/watch?v=eJO5HU_7_1w&t=83s" target="_blank" class="btn btn-outline">
                 <i class="fas fa-music"></i>
                 I'm Slim Shady
             </a>
 
         </div>
     </footer>
-    
+
 
     <script>
         // Simple JavaScript for mobile menu toggle
         const toggleBtn = document.querySelector('.toggle-btn');
         const navLinks = document.querySelector('.nav-links');
-        
+
         toggleBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
-        
+
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navLinks.contains(e.target) && !toggleBtn.contains(e.target)) {
@@ -547,33 +640,33 @@
         const modalImg = document.getElementById('modalImg');
         const closeModal = document.querySelector('.close-modal');
         const certLinks = document.querySelectorAll('.cert-link');
-        
+
         // Open modal when certification is clicked
         certLinks.forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 const imgSrc = this.getAttribute('data-img');
                 modalImg.src = imgSrc;
                 modal.style.display = 'block';
                 document.body.style.overflow = 'hidden'; // Prevent scrolling
             });
         });
-        
+
         // Close modal when X is clicked
-        closeModal.addEventListener('click', function() {
+        closeModal.addEventListener('click', function () {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto'; // Enable scrolling
         });
-        
+
         // Close modal when clicking outside the image
-        modal.addEventListener('click', function(event) {
+        modal.addEventListener('click', function (event) {
             if (event.target === modal) {
                 modal.style.display = 'none';
                 document.body.style.overflow = 'auto'; // Enable scrolling
             }
         });
-        
+
         // Close modal with ESC key
-        document.addEventListener('keydown', function(event) {
+        document.addEventListener('keydown', function (event) {
             if (event.key === 'Escape' && modal.style.display === 'block') {
                 modal.style.display = 'none';
                 document.body.style.overflow = 'auto'; // Enable scrolling
@@ -581,4 +674,5 @@
         });
     </script>
 </body>
-</html> 
+
+</html>

@@ -1,0 +1,51 @@
+{
+  "name": "mahesh-vyas-portfolio",
+  "version": "2.0.0",
+  "description": "Modern, interactive portfolio website showcasing AI/ML and web development projects",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o",
+    "dev": "npx live-server --port=3000 --open=/index.html",
+    "build": "echo 'Static site - no build process needed'",
+    "deploy": "echo 'Deploy to your preferred hosting service'"
+  },
+  "keywords": [
+    "portfolio",
+    "web-development",
+    "machine-learning",
+    "ai",
+    "javascript",
+    "html5",
+    "css3",
+    "responsive-design",
+    "interactive",
+    "modern"
+  ],
+  "author": {
+    "name": "Mahesh Vyas",
+    "email": "maheshvya.724@gmail.com",
+    "url": "https://github.com/maheshh-v"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maheshh-v/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maheshh-v/portfolio/issues"
+  },
+  "homepage": "https://maheshh-v.github.io/portfolio",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
