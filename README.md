@@ -155,11 +155,14 @@ portfolio/
 - [ ] PWA capabilities
 - [ ] Multi-language support
 
-## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+## 🔗 Live Demo
 
-## 🤝 Contributing
+Check out the live portfolio here:  
+ [maheshh-v.github.io/Portfolio](https://maheshh-v.github.io/Portfolio/)
+
+
+##  Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/maheshh-v/portfolio/issues).
 
