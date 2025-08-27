@@ -1,0 +1,105 @@
+{
+  "featured": [
+    {
+      "id": "moodsense-ai",
+      "name": "MoodSense AI",
+      "icon": "🎼",
+      "repo": "maheshh-v/MoodSense-AI",
+      "description": "Built an NLP-based app that detects emotions and suggests mood-aligned songs. Trained and compared LSTM-based models using GloVe embeddings.",
+      "tech": "Deep Learning Models",
+      "tags": ["TensorFlow", "Keras", "Pandas", "Streamlit", "NumPy", "Matplotlib"],
+      "featured": true,
+      "aiComplexity": 9.2
+    },
+    {
+      "id": "resume-chatbot",
+      "name": "Resume Q&A Chatbot",
+      "icon": "fa-solid fa-robot",
+      "repo": "maheshh-v/Resume-Q-A-Chatbot",
+      "description": "Built an intelligent chatbot to answer resume-related queries using FAISS for vector search and Hugging Face LLMs via LangChain.",
+      "tech": "Semantic Search + RAG Pipeline",
+      "tags": ["LangChain", "FAISS", "Hugging Face", "Pandas", "Scikit-learn"],
+      "featured": true,
+      "aiComplexity": 8.8
+    },
+    {
+      "id": "sms-spam",
+      "name": "SMS Spam Classifier",
+      "icon": "fa-solid fa-ban",
+      "repo": "maheshh-v/sms_spam_classifier",
+      "description": "Built an NLP spam detector with CountVectorizer and Naive Bayes (97% test accuracy); deployed via interactive Streamlit app.",
+      "tech": "NLP + Streamlit Dashboard",
+      "tags": ["Python", "Scikit-learn", "Pandas", "Streamlit", "NLTK"],
+      "featured": true,
+      "aiComplexity": 7.5
+    }
+  ],
+  "all": [
+    {
+      "id": "house-price",
+      "name": "House Price Prediction",
+      "icon": "fa-solid fa-house-circle-dollar",
+      "repo": "maheshh-v/SmartHousePrice-Predictor",
+      "description": "Built and deployed a regression model with log-transformed targets; live app features a clean UI with 5 key inputs. Engineered features and used log transformation for improved accuracy.",
+      "tech": "Streamlit Dashboard",
+      "tags": ["Python", "Scikit-learn", "Pandas", "Streamlit", "Git", "Numpy", "Matplotlib"],
+      "featured": false,
+      "aiComplexity": 6.8
+    },
+    {
+      "id": "titanic-survival",
+      "name": "Titanic Survival Prediction",
+      "icon": "fa-solid fa-person-swimming",
+      "repo": "maheshh-v/Titanic-survival-prediction",
+      "description": "Built and deployed a high-performance classification model (ROC-AUC: 0.88) using engineered features like Title and FamilySize; served via Flask API.",
+      "tech": "End-to-End ML Pipeline + API",
+      "tags": ["Python", "Scikit-learn", "Flask", "Pandas", "NumPy"],
+      "featured": false,
+      "aiComplexity": 7.2
+    },
+    {
+      "id": "cafe-analysis",
+      "name": "Cafe Sales Analysis",
+      "icon": "fa-solid fa-mug-hot",
+      "repo": "maheshh-v/Cafe-sales-Analysis",
+      "description": "Analyzed 10,000+ transactions to identify top items and peak hours. Visualized seasonal sales trends and payment behavior.",
+      "tech": "Data Insights with Pandas & Numpy",
+      "tags": ["Jupyter Notebook", "Pandas", "Numpy", "Matplotlib"],
+      "featured": false,
+      "aiComplexity": 5.5
+    },
+    {
+      "id": "notenest",
+      "name": "NoteNest",
+      "icon": "fa-regular fa-note-sticky",
+      "repo": "maheshh-v/NoteNest",
+      "description": "NoteNest is a Django-based web app with full note management features, including Google login, password change, and complete user authentication.",
+      "tech": "Django Web App with Google Auth",
+      "tags": ["Google Authentication", "Django", "CRUD"],
+      "featured": false,
+      "aiComplexity": 4.0
+    },
+    {
+      "id": "bg-remover",
+      "name": "BG-remover",
+      "icon": "fa-regular fa-circle-user",
+      "repo": "maheshh-v/Bgremover-prjct",
+      "description": "A Python-based background remover that allows users to upload an image and download it with background removed using AI image processing.",
+      "tech": "AI Image Processing",
+      "tags": ["Python", "Django", "AI", "Image Processing"],
+      "featured": false,
+      "aiComplexity": 6.5
+    },
+    {
+      "id": "passvault",
+      "name": "PassVault",
+      "icon": "fa-solid fa-vault",
+      "repo": "maheshh-v/PassVault",
+      "description": "PassVault is a secure web-based password manager that allows users to safely store, retrieve, and manage their website credentials.",
+      "tech": "Secure Password Manager",
+      "tags": ["Password Manager", "Django", "Security", "Web App"],
+      "featured": false,
+      "aiComplexity": 3.8
+    }
+  ]
+}
