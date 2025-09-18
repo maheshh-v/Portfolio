@@ -10,6 +10,8 @@
     <meta name="author" content="Mahesh Vyas">
     <title>Mahesh Vyas | Portfolio</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/effects.css">
+    <link rel="stylesheet" href="styles/ai-effects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -20,25 +22,10 @@
 </head>
 
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div class="loader">
-            <div class="loader-text">
-                <span class="letter">M</span>
-                <span class="letter">A</span>
-                <span class="letter">H</span>
-                <span class="letter">E</span>
-                <span class="letter">S</span>
-                <span class="letter">H</span>
-            </div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Particle Background -->
-    <div id="particles-js"></div>
+
+    <!-- Neural Network Glow -->
+    <div class="neural-glow"></div>
     <header>
         <nav class="container">
             <div class="logo animated-logo">Portfolio</div>
@@ -89,10 +76,10 @@
 
         <!-- Projects Section -->
         <section class="section container">
-            <h2 class="section-title fade-in">Featured Projects</h2>
+            <h2 class="section-title fade-in glitch-text">Featured Projects</h2>
             <p class="section-subtitle fade-in">AI-powered solutions showcasing cutting-edge technology</p>
             <div class="projects-grid">
-                <div class="project-card fade-in">
+                <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">
                             🎼 MoodSense AI
@@ -110,7 +97,7 @@
                             <span class="tag">Matplotlib</span>
                         </div>
                         <div class="project-links">
-                            <button class="btn" onclick="showProjectDetails('maheshh-v/MoodSense-AI', 'MoodSense AI')">
+                            <button class="btn" onclick="showProjectDetails('maheshh-v/MoodSense-AI', 'MoodSense AI')" style="pointer-events: auto !important; z-index: 999 !important; position: relative !important; cursor: pointer !important; transition: none !important;">
                                 <i class="fas fa-info-circle"></i>
                                 View Details
                             </button>
@@ -122,7 +109,7 @@
                     </div>
                 </div>
 
-                <div class="project-card fade-in">
+                <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">
                             <i class="fa-solid fa-robot"></i>
@@ -140,7 +127,7 @@
                             <span class="tag">Scikit-learn</span>
                         </div>
                         <div class="project-links">
-                            <button class="btn" onclick="showProjectDetails('maheshh-v/Resume-Q-A-Chatbot', 'Resume Q&A Chatbot')">
+                            <button class="btn" onclick="showProjectDetails('maheshh-v/Resume-Q-A-Chatbot', 'Resume Q&A Chatbot')" style="pointer-events: auto !important; z-index: 999 !important; position: relative !important; cursor: pointer !important; transition: none !important;">
                                 <i class="fas fa-info-circle"></i>
                                 View Details
                             </button>
@@ -152,7 +139,7 @@
                     </div>
                 </div>
 
-                <div class="project-card fade-in">
+                <div class="project-card">
                     <div class="project-content">
                         <h3 class="project-title">
                             <i class="fa-solid fa-ban"></i>
@@ -170,7 +157,7 @@
                             <span class="tag">NLTK</span>
                         </div>
                         <div class="project-links">
-                            <button class="btn" onclick="showProjectDetails('maheshh-v/sms_spam_classifier', 'SMS Spam Classifier')">
+                            <button class="btn" onclick="showProjectDetails('maheshh-v/sms_spam_classifier', 'SMS Spam Classifier')" style="pointer-events: auto !important; z-index: 999 !important; position: relative !important; cursor: pointer !important; transition: none !important;">
                                 <i class="fas fa-info-circle"></i>
                                 View Details
                             </button>
@@ -193,7 +180,7 @@
 
         <!-- Skills Section -->
         <section class="section container">
-            <h2 class="section-title fade-in">My Skills</h2>
+            <h2 class="section-title fade-in glitch-text">My Skills</h2>
 
             <!-- Languages -->
             <div class="skill-category fade-in">
@@ -211,10 +198,7 @@
                         <i class="fas fa-database"></i>
                         <h4>SQL</h4>
                     </div>
-                    <div class="skill-card">
-                        <i class="fas fa-code"></i>
-                        <h4>C Language</h4>
-                    </div>
+
                 </div>
             </div>
 
@@ -358,7 +342,7 @@
 
         <section id="contact" class="section">
             <div class="container">
-                <h2 class="section-title fade-in">Let's Work Together</h2>
+                <h2 class="section-title fade-in glitch-text">Let's Work Together</h2>
                 <p class="section-subtitle fade-in">Ready to bring your ideas to life with cutting-edge AI solutions</p>
                 <div class="contact-content fade-in" style="text-align: center; max-width: 600px; margin: 0 auto;">
                     <p style="font-size: 1.125rem; color: var(--text-muted); margin-bottom: 2.5rem; line-height: 1.7;">I'm always excited to discuss new opportunities, innovative projects, or just connect with fellow tech enthusiasts. Let's create something amazing together!</p>
@@ -410,8 +394,26 @@
     </footer>
 
 
+    <!-- Morphing Shapes -->
+    <svg class="morphing-shape shape-1" viewBox="0 0 100 100">
+        <path d="M50,50 m-40,0 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0"></path>
+    </svg>
+    <svg class="morphing-shape shape-2" viewBox="0 0 100 100">
+        <path d="M50,50 m-40,0 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0"></path>
+    </svg>
+    <svg class="morphing-shape shape-3" viewBox="0 0 100 100">
+        <path d="M50,50 m-40,0 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0"></path>
+    </svg>
+
+    <script src="js/ai-brain.js"></script>
+    <script src="js/circuit-patterns.js"></script>
+    <script src="js/digital-signature.js"></script>
+    <script src="js/magnetic-cursor.js"></script>
+    <script src="js/hover-effects.js"></script>
+    <script src="js/synaptic-background.js"></script>
     <script src="js/neural.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/effects.js"></script>
     <script>
         function showProjectDetails(repo, name) {
             let modal = document.getElementById('project-modal');
@@ -568,57 +570,7 @@
     <script>
         // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize professional particles
-            particlesJS('particles-js', {
-                particles: {
-                    number: { value: 60, density: { enable: true, value_area: 1000 } },
-                    color: { value: ['#00d4ff', '#6366f1', '#8b5cf6'] },
-                    shape: { 
-                        type: 'circle',
-                        stroke: { width: 0, color: '#000000' }
-                    },
-                    opacity: { 
-                        value: 0.4, 
-                        random: true,
-                        anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false }
-                    },
-                    size: { 
-                        value: 2, 
-                        random: true,
-                        anim: { enable: true, speed: 2, size_min: 0.5, sync: false }
-                    },
-                    line_linked: {
-                        enable: true,
-                        distance: 120,
-                        color: '#00d4ff',
-                        opacity: 0.15,
-                        width: 1
-                    },
-                    move: {
-                        enable: true,
-                        speed: 2,
-                        direction: 'none',
-                        random: true,
-                        straight: false,
-                        out_mode: 'out',
-                        bounce: false,
-                        attract: { enable: false, rotateX: 600, rotateY: 1200 }
-                    }
-                },
-                interactivity: {
-                    detect_on: 'canvas',
-                    events: {
-                        onhover: { enable: true, mode: 'grab' },
-                        onclick: { enable: true, mode: 'push' },
-                        resize: true
-                    },
-                    modes: {
-                        grab: { distance: 140, line_linked: { opacity: 0.3 } },
-                        push: { particles_nb: 4 }
-                    }
-                },
-                retina_detect: true
-            });
+
 
             // Initialize professional typing animation
             const typed = new Typed('#typed-text', {
@@ -645,19 +597,10 @@
                 });
             });
 
-            // Loading screen
-            setTimeout(() => {
-                document.getElementById('loading-screen').style.opacity = '0';
-                setTimeout(() => {
-                    document.getElementById('loading-screen').style.display = 'none';
-                    // Trigger fade-in animations
-                    document.querySelectorAll('.fade-in-up').forEach((el, index) => {
-                        setTimeout(() => {
-                            el.classList.add('visible');
-                        }, index * 200);
-                    });
-                }, 500);
-            }, 2000);
+            // Trigger fade-in animations immediately
+            document.querySelectorAll('.fade-in-up').forEach((el) => {
+                el.classList.add('visible');
+            });
         });
     </script>
 </body>

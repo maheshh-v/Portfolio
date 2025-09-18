@@ -1,0 +1,284 @@
+/* Enhanced Effects Styles */
+
+/* Parallax Elements */
+.parallax {
+    will-change: transform;
+}
+
+/* Morphing Shapes */
+.morphing-shape {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: -2;
+}
+
+.morphing-shape path {
+    fill: var(--primary-color);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shape-1 {
+    top: 15%;
+    right: 8%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-2 {
+    bottom: 25%;
+    left: 8%;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+.shape-3 {
+    top: 60%;
+    right: 12%;
+    animation: float 7s ease-in-out infinite;
+}
+
+/* Glitch Text Effect */
+.glitch-text {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.glitch-text:hover {
+    text-shadow: 0 0 10px var(--primary-color);
+    pointer-events: auto;
+}
+
+.glitching {
+    animation: glitch 0.3s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 #ff0000, -0.05em -0.025em 0 #00ff00, 0.025em 0.05em 0 #0000ff;
+    }
+    15% {
+        text-shadow: 0.05em 0 0 #ff0000, -0.05em -0.025em 0 #00ff00, 0.025em 0.05em 0 #0000ff;
+    }
+    16% {
+        text-shadow: -0.05em -0.025em 0 #ff0000, 0.025em 0.025em 0 #00ff00, -0.05em -0.05em 0 #0000ff;
+    }
+    49% {
+        text-shadow: -0.05em -0.025em 0 #ff0000, 0.025em 0.025em 0 #00ff00, -0.05em -0.05em 0 #0000ff;
+    }
+    50% {
+        text-shadow: 0.025em 0.05em 0 #ff0000, 0.05em 0 0 #00ff00, 0 -0.05em 0 #0000ff;
+    }
+    99% {
+        text-shadow: 0.025em 0.05em 0 #ff0000, 0.05em 0 0 #00ff00, 0 -0.05em 0 #0000ff;
+    }
+    100% {
+        text-shadow: -0.025em 0 0 #ff0000, -0.025em -0.025em 0 #00ff00, -0.025em -0.05em 0 #0000ff;
+    }
+}
+
+/* Sound Toggle */
+.sound-toggle {
+    background: rgba(0, 212, 255, 0.1);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+.sound-toggle:hover {
+    background: rgba(0, 212, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.sound-toggle.disabled {
+    opacity: 0.5;
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+/* Synaptic Background Canvas */
+#synaptic-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    pointer-events: none;
+    opacity: 0.12;
+    filter: blur(0.2px);
+}
+
+/* Enhanced Neural Network Canvas */
+#neural-network {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    pointer-events: none;
+    opacity: 0.4;
+    filter: blur(0.5px) brightness(1.1);
+    transition: opacity 0.3s ease;
+}
+
+/* Neural Network Glow Effect */
+.neural-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 50%, 
+        rgba(0, 255, 255, 0.02) 0%, 
+        rgba(100, 255, 218, 0.01) 30%, 
+        transparent 70%);
+    animation: neural-pulse 4s ease-in-out infinite;
+}
+
+@keyframes neural-pulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+}
+
+/* Performance optimizations for neural network */
+@media (prefers-reduced-motion: reduce) {
+    #neural-network {
+        opacity: 0.2;
+        filter: none;
+    }
+    
+    .neural-glow {
+        animation: none;
+    }
+}
+
+/* High performance mode for low-end devices */
+@media (max-width: 768px) {
+    #neural-network {
+        opacity: 0.25;
+        filter: blur(1px);
+    }
+    
+    .neural-glow {
+        display: none;
+    }
+}
+
+/* Enhanced Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-20px) rotate(90deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(180deg);
+    }
+    75% {
+        transform: translateY(-30px) rotate(270deg);
+    }
+}
+
+/* Parallax Background Elements */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg-element {
+    position: absolute;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.hero-bg-1 {
+    top: 10%;
+    left: -10%;
+    font-size: 200px;
+    color: var(--primary-color);
+}
+
+.hero-bg-2 {
+    bottom: 10%;
+    right: -10%;
+    font-size: 150px;
+    color: var(--secondary-color);
+}
+
+/* Enhanced Button Effects */
+button, .btn {
+    position: relative;
+    overflow: hidden;
+}
+
+button::before, .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button:active::before, .btn:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .morphing-shape {
+        width: 50px;
+        height: 50px;
+        opacity: 0.03;
+    }
+    
+    .sound-toggle {
+        width: 35px;
+        height: 35px;
+        top: 80px;
+        right: 10px;
+    }
+    
+    #synaptic-bg {
+        opacity: 0.06;
+        filter: blur(0.4px);
+    }
+    
+    .glitch-text:hover {
+        text-shadow: none;
+    }
+    
+    .shape-1, .shape-2, .shape-3 {
+        display: none;
+    }
+}

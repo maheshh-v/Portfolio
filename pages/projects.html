@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Projects | Mahesh Vyas</title>
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/effects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -43,7 +44,7 @@
     <main>
         <!-- Projects Section -->
         <section class="section container" style="padding-top: 8rem;">
-            <h2 class="section-title fade-in">All Projects</h2>
+            <h2 class="section-title fade-in glitch-text">All Projects</h2>
             <p class="section-subtitle fade-in">Complete portfolio of AI/ML solutions and web applications</p>
             <div class="all-projects-grid projects-grid">
                 <div class="project-card fade-in">
@@ -550,6 +551,18 @@
         // Check on scroll
         window.addEventListener('scroll', checkFade);
     </script>
+    <!-- Morphing Shapes -->
+    <svg class="morphing-shape shape-1" viewBox="0 0 100 100">
+        <path d="M50,50 m-40,0 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0"></path>
+    </svg>
+    <svg class="morphing-shape shape-2" viewBox="0 0 100 100">
+        <path d="M50,50 m-40,0 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0"></path>
+    </svg>
+
+    <script src="../js/magnetic-cursor.js"></script>
+    <script src="../js/hover-effects.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/effects.js"></script>
 </body>
 
 </html>

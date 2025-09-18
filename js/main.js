@@ -1,3 +1,61 @@
+// Enhanced Custom Cursor
+class CustomCursor {
+    constructor() {
+        this.cursorDot = null;
+        this.cursorOutline = null;
+        this.mouseX = 0;
+        this.mouseY = 0;
+        this.outlineX = 0;
+        this.outlineY = 0;
+        
+        this.init();
+    }
+    
+    init() {
+        this.createCursor();
+        this.bindEvents();
+        this.animate();
+    }
+    
+    createCursor() {
+        this.cursorDot = document.createElement('div');
+        this.cursorOutline = document.createElement('div');
+        this.cursorDot.className = 'cursor-dot';
+        this.cursorOutline.className = 'cursor-outline';
+        document.body.appendChild(this.cursorDot);
+        document.body.appendChild(this.cursorOutline);
+    }
+    
+    bindEvents() {
+        document.addEventListener('mousemove', (e) => {
+            this.mouseX = e.clientX;
+            this.mouseY = e.clientY;
+            this.cursorDot.style.left = this.mouseX + 'px';
+            this.cursorDot.style.top = this.mouseY + 'px';
+        });
+        
+        // Hover effects
+        document.querySelectorAll('a, button, .btn, .skill-card, .project-card, .social-link').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                this.cursorDot.classList.add('hover');
+                this.cursorOutline.classList.add('hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                this.cursorDot.classList.remove('hover');
+                this.cursorOutline.classList.remove('hover');
+            });
+        });
+    }
+    
+    animate() {
+        this.outlineX += (this.mouseX - this.outlineX) * 0.2;
+        this.outlineY += (this.mouseY - this.outlineY) * 0.2;
+        this.cursorOutline.style.left = this.outlineX + 'px';
+        this.cursorOutline.style.top = this.outlineY + 'px';
+        requestAnimationFrame(() => this.animate());
+    }
+}
+
 // Enhanced Mobile Navigation
 class Navigation {
     constructor() {
@@ -92,6 +150,7 @@ class ScrollAnimations {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    new CustomCursor();
     new Navigation();
     new ScrollAnimations();
 });
