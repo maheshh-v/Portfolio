@@ -1,4 +1,50 @@
 {
+  "internship": [
+    {
+      "id": "recruitment-agent",
+      "name": "Recruitment Intelligence Agent",
+      "icon": "🤖",
+      "company": "Stirring Minds",
+      "description": "Built an AI-powered recruitment system that automates candidate evaluation by parsing resumes, extracting key information, matching with job descriptions, and generating detailed scoring with reasoning. Reduced screening time from 2 hours to 5 minutes per candidate.",
+      "tech": "AI-Powered Candidate Evaluation System",
+      "tags": ["Python", "LangChain", "OpenAI GPT", "Resume Parsing", "NLP", "Scoring Algorithm"],
+      "featured": true,
+      "type": "internship"
+    },
+    {
+      "id": "social-media-agent",
+      "name": "Social Media Automation Agent",
+      "icon": "📱",
+      "company": "Stirring Minds",
+      "description": "Developed a comprehensive social media automation system handling content scheduling, multi-platform posting, engagement tracking, and analytics. Saves 30+ hours weekly in manual social media management.",
+      "tech": "End-to-End Social Media Workflow",
+      "tags": ["Python", "n8n", "REST APIs", "Webhooks", "Automation", "Analytics"],
+      "featured": true,
+      "type": "internship"
+    },
+    {
+      "id": "enterprise-automation",
+      "name": "Enterprise Automation Suite",
+      "icon": "⚙️",
+      "company": "Stirring Minds",
+      "description": "Created custom automation workflows for Operations, Sales, and Recruitment teams using n8n and Integrately. Automated 50+ hours of repetitive manual work weekly across teams.",
+      "tech": "Multi-Team Workflow Automation",
+      "tags": ["n8n", "Integrately", "API Integration", "Workflow Design", "Process Automation"],
+      "featured": true,
+      "type": "internship"
+    },
+    {
+      "id": "enterprise-chatbot",
+      "name": "Enterprise Chatbot",
+      "icon": "💬",
+      "company": "Stirring Minds",
+      "description": "Collaborating on building an enterprise chatbot with RAG architecture for customer support automation. Implementing advanced prompt engineering and LLM integration.",
+      "tech": "RAG-Based Intelligent Assistant",
+      "tags": ["LangChain", "RAG", "Vector DB", "Prompt Engineering", "Claude/GPT"],
+      "featured": false,
+      "type": "internship"
+    }
+  ],
   "featured": [
     {
       "id": "moodsense-ai",
